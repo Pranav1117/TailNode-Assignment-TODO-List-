@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Niramit', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+
+header{
+    height: 5rem;
+    width: 100%;
+    background-color: #bb2760;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    width: 70%;
+}
+.title h1{
+    color: white;
+    
+}
+
+.reset-btn{
+    width: 20%;
+    padding: 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.reset-btn button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.delete-icon{
+    background: transparent;
+    width: 3.5rem;
+    filter: invert();
+    transition: 0.3s ease;
+}
+.delete-icon:hover{
+    transform: scale(1.1);
+}
+
+header div{
+    padding: 1rem;
+}
+
+.marked{
+    text-decoration: line-through;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.title-wrapper h3{
+    text-align: center;
+    font-size:3rem;
+    color: #8e0439;
+}
+.title-input-wrapper{
+    width: 90%;
+}
+
+
+form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    padding: 1.7rem;
+    width: 80%;
+    height: 1rem;
+    border: none;
+    font-size: 2.3rem;
+    color: #cc8e60;
+    border: 1px solid ;
+    border-radius: 10px;
+
+    
+}
+.input::placeholder{
+    color: #BAB2B5;
+    font-size: 1.5rem;
+    
+}
+
+.input:focus{
+    outline: none;
+}
+
+.add-btn{
+    width: 6rem;
+    background-color: #BAB2B5;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+.todo-list-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.unmarked-todo-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.todo-list-wrapper:nth-child(even){
+    background-color: #fcf2ed;
+    /* border: 2px solid #8e0439; */
+    color: #026c39;
+}
+
+.todo-list-wrapper:nth-child(odd){
+    background-color: #f2d4c7;
+}
+.todo-list-wrapper{
+    line-break: anywhere;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 1.9rem;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #8e0439;
+}
+
+.todo-list{
+    width: 70%;
+    
+}
+
+.delete-mark-btns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 25%;
+    height: 2.5rem;
+}
+
+.delete-mark-btns button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.mark-btn{
+    background-color: #123C69;
+    color: white;
+}
+
+
+
+.empty-txt{
+    font-size: 2rem;
+}
+
+/* Marked Done List */
+
+.marked-todos-wrapper{
+    margin-top: 4rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 90%;
+    font-size: 1.5rem;
+    color: rgb(181, 179, 179);
+}
+
+.done-txt{
+    color: #8e0439;
+    border-bottom: 3px solid black;
+}
+
+.marked{
+    border-bottom: 1px dotted black;
+}
+
+
+@media only screen and (min-width:250px) and (max-width:850px){
+    .delete-mark-btns button{
+        font-size: 0.7rem;
+        overflow: hidden;
+    }
+    .delete-mark-btns{
+        height: 1.7rem;
+    }
+    .todo-list-wrapper{
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .input{
+        height: 0.7rem;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+    .add-btn{
+        font-size: 1rem;
+        width: 4rem;
+    }
+}
